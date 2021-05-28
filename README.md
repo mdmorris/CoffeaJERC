@@ -26,7 +26,7 @@ We will then run the following commands to set up the lpc_dask and Coffea enviro
 3. ```./shell```
 4. At this point you will be in your singularity container. Quit the singularity container with the command ```quit```
 5. ```cp -r /uscms_data/d3/ncsmith/dazsle/boostedhiggs/.local/share/jupyter/kernels .local/share/jupyter/```
-6. git clone https://github.com/mdmorris/CoffeaJERC/
+6. ```git clone https://github.com/mdmorris/CoffeaJERC/```
 7. ```./shell```
 8. Now you will be in your singularity container again. Open a jupyter notebook with the command: 
 
