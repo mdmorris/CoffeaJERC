@@ -2,7 +2,7 @@
 Log into the lpc with the following command:
 
 ```
-ssh -L localhost:8888:localhost:8888  <username>@cmslpc-sl7.fnal.gov
+ssh -L localhost:8888:localhost:8888  <user>@cmslpc-sl7.fnal.gov
 ```
 
 Then get a voms ticket:
