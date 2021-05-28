@@ -1,52 +1,79 @@
-# CoffeaJERC
-Jet energy resolution and corrections with NANAOD and columnar analysis based on Coffea. 
-
-## Set up a coffea-enabled environment at FNAL
-
-Below, change `<username>` to your user name, `<your_directory>` to your scratch directory. 
-
-Log into `cmslpc`: 
+# CoffeaJERC Tutorial
+Log into the lpc with the following command:
 
 ```
-ssh -L localhost:8888:localhost:8888  <username>@cmslpc-sl7.fnal.gov
+ssh -L localhost:8888:localhost:8888  username@cmslpc-sl7.fnal.gov
 ```
 
-Get a voms ticket: 
+Then get a voms ticket:
 
 ```
-voms proxy init -voms cms
+voms-proxy-init -voms cms
 ```
 
-Next set cache directory for singularity, go to that directory, and get the docker container for `coffea-dask`: 
+Create a directory in your nobackup area to run this exercise:
+
 
 ```
-export SINGULARITY_CACHEDIR=/uscms_data/d2/<your_directory>/singularity/.singularity
-cd /uscms_data/d2/<your_directory>/singularity
-singularity shell -B ${PWD}:/work /cvmfs/unpacked.cern.ch/registry.hub.docker.com/coffeateam/coffea-dask:latest
+mkdir ~/nobackup/CoffeaJERC/
+cd ~/nobackup/CoffeaJERC/
 ```
 
-From within the container, set the jupyter paths and start a server: 
+We will then run the following commands to set up the lpc_dask and Coffea environment
+
+1. ```curl -OL https://raw.githubusercontent.com/CoffeaTeam/lpcjobqueue/main/bootstrap.sh```
+2. ``` bash bootstrap.sh ```
+3. ```./shell```
+4. At this point you will be in your singularity container. Quit the singularity container with the command ```quit```
+5. ```cp -r /uscms_data/d3/ncsmith/dazsle/boostedhiggs/.local/share/jupyter/kernels .local/share/jupyter/```
+6. git clone https://github.com/mdmorris/CoffeaJERC/
+7. ```./shell```
+8. Now you will be in your singularity container again. Open a jupyter notebook with the command: 
+
+```jupyter notebook --ip 0.0.0.0 --no-browser --port=8888```
+
+
+The output from all of these commands should look similar to the output below:
+
 
 ```
-export JUPYTER_PATH=/work/.jupyter
-export JUPYTER_RUNTIME_DIR=/work/.local/share/jupyter/runtime
-export JUPYTER_DATA_DIR=/work/.local/share/jupyter
-export IPYTHONDIR=/work/.ipython
-jupyter notebook --ip 0.0.0.0 --no-browser --notebook-dir /work
+$ curl -OL https://raw.githubusercontent.com/CoffeaTeam/lpcjobqueue/main/bootstrap.sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1312  100  1312    0     0   3318      0 --:--:-- --:--:-- --:--:--  3321
+
+$ bash bootstrap.sh
+Wrote shell and .bashrc to current directory. You can delete this file. Run ./shell to start the singularity shell
+
+$ ./shell
+Installing shallow virtual environment in /srv/.env...
+Installed kernelspec python3 in /srv/.local/share/jupyter/kernels/python3
+done.
+
+Singularity> quit
+
+$ cp -r /uscms_data/d3/ncsmith/dazsle/boostedhiggs/.local/share/jupyter/kernels .local/share/jupyter/
+
+$ ./shell
+
+Singularity> jupyter notebook --ip 0.0.0.0 --no-browser --port=8888
+
+[C 11:23:05.656 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///srv/.local/share/jupyter/runtime/nbserver-6621-open.html
+    Or copy and paste one of these URLs:
+        http://cmslpc169.fnal.gov:8888/?token=cd3b09ea36536befc848b0ee1647c3a21d799ef2adf2983c
+     or http://127.0.0.1:8888/?token=cd3b09ea36536befc848b0ee1647c3a21d799ef2adf2983c
+
+
 ```
 
-## Execute notebook
-
-Go to [localhost](http://127.0.0.1:8888) to open the jupyter interface. 
-
-## Get the exercises
-
-Open the terminal via "New -> Terminal"
-
-Then
+Copy the url from your output:
 
 ```
-git clone https://github.com/cms-jet/CoffeaJERC.git
-```
+http://127.0.0.1:8888/?token=cd3b09ea36536befc848b0ee1647c3a21d799ef2adf2983c
+``` 
+and enter it in a browser.
 
-The example notebook is [genL2L3.ipynb](https://github.com/cms-jet/CoffeaJERC/blob/master/genL2L3.ipynb). 
+Run the notebook coffea-dask-join.ipynb
