@@ -21,21 +21,21 @@ cd ~/nobackup/CoffeaJERC/
 
 We will then run the following commands to set up the lpc_dask and Coffea environment
 
-```curl -OL https://raw.githubusercontent.com/CoffeaTeam/lpcjobqueue/main/bootstrap.sh```
+1. ```curl -OL https://raw.githubusercontent.com/CoffeaTeam/lpcjobqueue/main/bootstrap.sh```
 
-``` bash bootstrap.sh ```
+2. ``` bash bootstrap.sh ```
 
-```./shell```
+3. ```./shell```
 
-At this point you will be in your singularity container. Quit the singularity container with the command ```quit```
+4. At this point you will be in your singularity container. Quit the singularity container with the command ```quit```
 
-```cp -r /uscms_data/d3/ncsmith/dazsle/boostedhiggs/.local/share/jupyter/kernels .local/share/jupyter/```
+5. ```cp -r /uscms_data/d3/ncsmith/dazsle/boostedhiggs/.local/share/jupyter/kernels .local/share/jupyter/```
 
-```git clone https://github.com/mdmorris/CoffeaJERC/```
+6. ```git clone https://github.com/mdmorris/CoffeaJERC/```
 
-```./shell```
+7. ```./shell```
 
-Now you will be in your singularity container again. Open a jupyter notebook with the command: 
+8. Now you will be in your singularity container again. Open a jupyter notebook with the command: 
 
 ```jupyter notebook --ip 0.0.0.0 --no-browser --port=8888```
 
