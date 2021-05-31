@@ -27,7 +27,7 @@ We will then run the following commands to set up the lpc_dask and Coffea enviro
 
 3. ```./shell```
 
-4. At this point you will be in your singularity container. Quit the singularity container with the command ```quit```
+4. At this point you will be in your singularity container. Exit the singularity container with the command ```exit```
 
 5. ```cp -r /uscms_data/d3/ncsmith/dazsle/boostedhiggs/.local/share/jupyter/kernels .local/share/jupyter/```
 
