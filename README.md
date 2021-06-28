@@ -1,5 +1,36 @@
-# CoffeaJERC Tutorial
-Log into the lpc with the following command:
+# CoffeaJERC Tutorial - HATS 2021
+
+Sign into ACCRE:
+
+https://jupyter.accre.vanderbilt.edu/
+
+
+Make a new directory for the HATS tutorial
+
+```
+mkdir CoffeaJERCHATS
+cd CoffeaJERCHATS
+```
+
+Clone this repository and run the setup-environment.ipynb notebook
+
+
+```
+git clone https://github.com/mdmorris/CoffeaJERC/edit/master/README.md
+cd CoffeaJERC
+```
+
+Open the L2L3_profiles_demo_HATS21.ipynb notebook and change the kernel to `coffeajerc`
+
+![](coffea_kernel.png)
+
+Run L2L3_profiles_demo_HATS21.ipynb
+
+
+
+# CoffeaJERC Tutorial - LPC
+
+## Run the notebook coffea-dask-join.ipynb on the LPC
 
 ```
 ssh -L localhost:8888:localhost:8888  <user>@cmslpc-sl7.fnal.gov
