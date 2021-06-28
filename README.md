@@ -12,13 +12,14 @@ mkdir CoffeaJERCHATS
 cd CoffeaJERCHATS
 ```
 
-Clone this repository and run the setup-environment.ipynb notebook
-
+Clone this repository
 
 ```
 git clone https://github.com/mdmorris/CoffeaJERC
 cd CoffeaJERC
 ```
+
+Run the setup-environment.ipynb notebook
 
 Open the L2L3_profiles_demo_HATS21.ipynb notebook and change the kernel to `coffea-jerc`
 
