@@ -16,11 +16,11 @@ Clone this repository and run the setup-environment.ipynb notebook
 
 
 ```
-git clone https://github.com/mdmorris/CoffeaJERC/edit/master/README.md
+git clone https://github.com/mdmorris/CoffeaJERC
 cd CoffeaJERC
 ```
 
-Open the L2L3_profiles_demo_HATS21.ipynb notebook and change the kernel to `coffeajerc`
+Open the L2L3_profiles_demo_HATS21.ipynb notebook and change the kernel to `coffea-jerc`
 
 ![](coffea_kernel.png)
 
