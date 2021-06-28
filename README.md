@@ -27,6 +27,8 @@ Open the L2L3_profiles_demo_HATS21.ipynb notebook and change the kernel to `coff
 Run L2L3_profiles_demo_HATS21.ipynb
 
 
+#
+#
 
 # CoffeaJERC Tutorial - LPC
 
