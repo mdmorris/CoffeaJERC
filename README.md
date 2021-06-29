@@ -4,6 +4,12 @@ Sign into ACCRE:
 
 https://jupyter.accre.vanderbilt.edu/
 
+Open a terminal and get a voms ticket
+
+```
+voms-proxy-init -voms cms
+```
+
 
 Make a new directory for the HATS tutorial
 
